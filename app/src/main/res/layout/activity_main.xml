@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.opilane.animatsioon.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/maasikas"
+        android:id="@+id/maasikas"
+        android:layout_marginTop="60dp"/>
+
+    <Button
+        android:id="@+id/zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/maasikas"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/zoom"
+        android:background="@color/colorButton"
+        android:onClick="zoom"/>
+
+    <Button
+        android:id="@+id/clockwise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/blink"
+        android:layout_alignBottom="@+id/blink"
+        android:layout_toEndOf="@+id/maasikas"
+        android:layout_toRightOf="@+id/maasikas"
+        android:text="@string/clockwise"
+        android:background="@color/colorButton"
+        android:onClick="clockwise"/>
+
+    <Button
+        android:id="@+id/blink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fade"
+        android:layout_alignBottom="@+id/fade"
+        android:layout_alignLeft="@+id/slide"
+        android:layout_alignStart="@+id/slide"
+        android:text="@string/blink"
+        android:background="@color/colorButton"
+        android:onClick="blink"/>
+
+    <Button
+        android:id="@+id/fade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/zoom"
+        android:layout_alignStart="@+id/zoom"
+        android:layout_below="@+id/zoom"
+        android:layout_marginTop="35dp"
+        android:text="@string/fade"
+        android:background="@color/colorButton"
+        android:onClick="fade"/>
+
+    <Button
+        android:id="@+id/move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/slide"
+        android:layout_alignBottom="@+id/slide"
+        android:layout_alignLeft="@+id/clockwise"
+        android:layout_alignStart="@+id/clockwise"
+        android:text="@string/move"
+        android:background="@color/colorButton"
+        android:onClick="move"/>
+
+    <Button
+        android:id="@+id/slide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/zoom"
+        android:layout_alignBottom="@+id/zoom"
+        android:layout_centerHorizontal="true"
+        android:text="@string/slide"
+        android:background="@color/colorButton"
+        android:onClick="slide"/>
+</RelativeLayout>
